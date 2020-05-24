@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 #load env file
-load_dotenv(os.path.join('/', '.env'))
+# load_dotenv(os.path.join('/', '.env'))
 #laoad env vairable
 # CONSUMER_KEY = os.getenv("CONSUMER_KEY")
 # CONSUMER_SECRET = os.getenv("CONSUMER_SECRET")
@@ -25,12 +25,12 @@ ACCESS_TOKEN_SECRET = 'ncG6se0SM89rxim8k5VtnCMEGJs6jGyHUFPWyI9wzznVg'
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    twt_data = twitter_data('apple')
     if (request.method == 'POST'):
         response = request.get_json()
         twt_data = twitter_data(response['keyword'])
         return jsonify(twt_data), 201
     else:
+        twt_data = twitter_data('apple')
         return jsonify(twt_data)
 @app.route('/trending', methods=['GET'])
 def trending():
