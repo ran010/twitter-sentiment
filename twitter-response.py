@@ -50,7 +50,7 @@ def trending():
 def twitter_data(search):
     api = twitter_auth_connection()
     tweets = []
-    for tweet in api.search(q='#{search}', lang="en", rpp=3000, tweet_mode="extended"):
+    for tweet in api.search(q='#{search}', lang="en", rpp=10000, tweet_mode="extended"):
         #pdb.set_trace()
         tweetObj ={}
         tweetObj["tweet"] = tweet.full_text
