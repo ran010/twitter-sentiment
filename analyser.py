@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Authors: 
+Authors:
 Debaleen Das Spandan (https://github.com/the-it-weirdo)
 Shouvit Pradhan (https://github.com/shaw8wit)
 '''

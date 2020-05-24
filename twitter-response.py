@@ -7,6 +7,8 @@ from langdetect import detect
 import tweepy
 import pdb
 import json
+from analyser import get_result
+
 
 app = Flask(__name__)
 CORS(app)
@@ -28,7 +30,7 @@ def index():
     if (request.method == 'POST'):
         response = request.get_json()
         twt_data = twitter_data(response['keyword'])
-        return jsonify(twt_data), 201
+        return jsonify(get_result(twt_data)), 201
     else:
         twt_data = twitter_data('apple')
         return jsonify(twt_data)
