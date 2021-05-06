@@ -1,5 +1,5 @@
 Flask==1.0.2
-flask_cors==3.0.8
+flask_cors==3.0.9
 langdetect== 1.0.8
 tweepy==3.8.0
 gunicorn==19.6.0
